@@ -11,142 +11,64 @@ margin:0;
 font-family:Arial;
 background:linear-gradient(135deg,#7f0000,#b71c1c,#d32f2f);
 color:white;
-}
-
-/* cờ việt nam */
-
-.flag{
-width:120px;
-margin:auto;
-display:block;
-animation:wave 2s infinite;
-}
-
-@keyframes wave{
-0%{transform:rotate(0deg)}
-50%{transform:rotate(3deg)}
-100%{transform:rotate(0deg)}
-}
-
-/* tiêu đề */
-
-.header{
 text-align:center;
-padding:30px;
+}
+
+header{
+padding:40px;
+background:#8b0000;
+}
+
+h1{
 font-size:45px;
-font-weight:bold;
-background:linear-gradient(90deg,#ffeb3b,#ffc107);
-color:#8b0000;
+margin:0;
 }
 
-.intro{
-width:80%;
-margin:auto;
-margin-top:30px;
-font-size:20px;
-line-height:1.6;
-background:rgba(255,255,255,0.1);
-padding:20px;
-border-radius:10px;
+h2{
+margin-top:40px;
 }
-
-/* section */
 
 .section{
 width:80%;
 margin:auto;
-margin-top:40px;
-background:white;
-color:#333;
-padding:25px;
-border-radius:12px;
-opacity:0;
-transform:translateY(60px);
-transition:1s;
+padding:20px;
 }
 
-.section.show{
-opacity:1;
-transform:translateY(0);
+.video{
+margin:30px auto;
 }
 
-.section h2{
-color:#b71c1c;
-border-left:8px solid #ffc107;
-padding-left:10px;
+iframe{
+width:70%;
+height:400px;
+border-radius:10px;
 }
-
-.media{
-margin-top:20px;
-height:360px;
-}
-
-.media iframe{
-width:100%;
-height:100%;
-border:none;
-border-radius:8px;
-}
-
-/* gallery */
 
 .gallery{
-display:grid;
-grid-template-columns:1fr;
-gap:25px;
-margin-top:20px;
-}
-
-.photo img{
-width:100%;
-height:350px;
-object-fit:cover;
-border-radius:10px;
-cursor:pointer;
-}
-
-.photo p{
-text-align:center;
-margin-top:8px;
-}
-
-/* lightbox */
-
-.lightbox{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-align-items:center;
+display:flex;
 justify-content:center;
+flex-wrap:wrap;
+gap:20px;
 }
 
-.lightbox img{
-max-width:90%;
-max-height:90%;
+.gallery-item{
+width:300px;
 }
 
-/* pháo hoa */
-
-#firework{
-display:none;
-position:fixed;
-top:0;
-left:0;
+.gallery img{
 width:100%;
-height:100%;
-pointer-events:none;
-background:url("https://media.giphy.com/media/3o7TKsQ8UQH8Z2RkU0/giphy.gif") center/cover;
+border-radius:10px;
 }
 
-.footer{
-text-align:center;
-margin-top:40px;
+.caption{
+margin-top:5px;
+font-size:14px;
+}
+
+footer{
+margin-top:50px;
 padding:20px;
-background:#880e4f;
+background:#600000;
 }
 
 </style>
@@ -154,67 +76,46 @@ background:#880e4f;
 
 <body>
 
-<img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg">
-
-<div class="header">
-GIẢI PHÓNG MIỀN NAM - THỐNG NHẤT ĐẤT NƯỚC
-</div>
-
-<div class="intro">
-Cuối năm 1974 – đầu năm 1975, Bộ Chính trị quyết định mở cuộc Tổng tiến công và nổi dậy mùa Xuân 1975 nhằm giải phóng miền Nam và thống nhất đất nước.
-</div>
-
+<header>
+<h1>Giải phóng miền Nam - Thống nhất đất nước</h1>
+<p>Kỷ niệm chiến thắng 30/04/1975</p>
+</header>
 
 <div class="section">
-<h2>Chiến dịch Tây Nguyên</h2>
-<div class="media">
-<iframe src="https://www.youtube.com/embed/3qfpQ1t6Y7A"></iframe>
-</div>
-</div>
 
+<h2>6 Chiến dịch lớn trong mùa Xuân 1975</h2>
 
-<div class="section">
-<h2>Chiến dịch Huế</h2>
-<div class="media">
-<iframe src="https://www.youtube.com/embed/8W8F4yJ4YvU"></iframe>
-</div>
+<div class="video">
+<h3>Chiến dịch Tây Nguyên</h3>
+<iframe src="https://www.youtube.com/embed/d3n2nqg7q3M"></iframe>
 </div>
 
-
-<div class="section">
-<h2>Chiến dịch Đà Nẵng</h2>
-<div class="media">
-<iframe src="https://www.youtube.com/embed/JN3V7w9Yh0Q"></iframe>
-</div>
+<div class="video">
+<h3>Chiến dịch Huế - Đà Nẵng</h3>
+<iframe src="https://www.youtube.com/embed/eH5C9sK1F0E"></iframe>
 </div>
 
-
-<div class="section">
-<h2>Chiến dịch Xuân Lộc</h2>
-<div class="media">
-<iframe src="https://www.youtube.com/embed/W5S8q4e6XKQ"></iframe>
-</div>
+<div class="video">
+<h3>Chiến dịch Trị - Thiên</h3>
+<iframe src="https://www.youtube.com/embed/l8m2pN3gGfY"></iframe>
 </div>
 
-
-<div class="section">
-<h2>Chiến dịch Hồ Chí Minh</h2>
-<div class="media">
-<iframe src="https://www.youtube.com/embed/7y0R9fF9N9k"></iframe>
-</div>
+<div class="video">
+<h3>Chiến dịch Xuân Lộc</h3>
+<iframe src="https://www.youtube.com/embed/ovm3QpW0d4Q"></iframe>
 </div>
 
+<div class="video">
+<h3>Chiến dịch Phan Rang</h3>
+<iframe src="https://www.youtube.com/embed/QqcxQK3O8zw"></iframe>
+</div>
 
-<div class="section" id="saigon">
-
-<h2>Giải phóng Sài Gòn – 30/4/1975</h2>
-
-<div class="media">
-<iframe src="https://www.youtube.com/embed/GK0cM9r7Q2s"></iframe>
+<div class="video">
+<h3>Chiến dịch Hồ Chí Minh</h3>
+<iframe src="https://www.youtube.com/embed/1u1n0V3x2v4"></iframe>
 </div>
 
 </div>
-
 
 <div class="section">
 
@@ -228,8 +129,13 @@ Cuối năm 1974 – đầu năm 1975, Bộ Chính trị quyết định mở cu
 
 <p><b>Kết thúc ách thống trị:</b> Xóa bỏ hoàn toàn chế độ thực dân mới của đế quốc Mỹ tại Việt Nam.</p>
 
-</div>
+<p>
+Chiến thắng 30/04 là minh chứng cho sức mạnh trí tuệ và lòng yêu nước.
+Thế hệ học sinh lớp 12 hôm nay nguyện ứng dụng những kiến thức Tin học và công nghệ
+để tiếp bước cha ông, xây dựng một Việt Nam hùng cường trên bản đồ số thế giới.
+</p>
 
+</div>
 
 <div class="section">
 
@@ -237,97 +143,41 @@ Cuối năm 1974 – đầu năm 1975, Bộ Chính trị quyết định mở cu
 
 <div class="gallery">
 
-<div class="photo">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Buon_Ma_Thuot_1975.jpg">
-<p>Chiến dịch Tây Nguyên 1975</p>
+<div class="gallery-item">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Tank_843_Independence_Palace.jpg">
+<div class="caption">Xe tăng tiến vào Dinh Độc Lập 30/4/1975</div>
 </div>
 
-<div class="photo">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Fall_of_Saigon.jpg">
-<p>Quân giải phóng tiến vào Sài Gòn</p>
+<div class="gallery-item">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Fall_of_Saigon.jpg">
+<div class="caption">Khoảnh khắc Sài Gòn được giải phóng</div>
 </div>
 
-<div class="photo">
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Xuan_Loc_1975.jpg">
-<p>Trận chiến Xuân Lộc</p>
+<div class="gallery-item">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/North_Vietnamese_troops_enter_Saigon.jpg">
+<div class="caption">Quân giải phóng tiến vào Sài Gòn</div>
 </div>
 
-<div class="photo">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Tank_843_Independence_Palace.jpg">
-<p>Xe tăng tiến vào Dinh Độc Lập</p>
+<div class="gallery-item">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Vietnamese_tank_843.jpg">
+<div class="caption">Xe tăng 843 lịch sử</div>
 </div>
 
-<div class="photo">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Saigon_1975_victory.jpg">
-<p>Người dân chào mừng ngày giải phóng</p>
+<div class="gallery-item">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Reunification_Palace_1975.jpg">
+<div class="caption">Dinh Độc Lập sau ngày thống nhất</div>
 </div>
 
 </div>
 
 </div>
 
-<div class="footer">
-Đại thắng mùa Xuân 1975
-</div>
+<footer>
 
-<div class="lightbox" id="lightbox">
-<img id="lightimg">
-</div>
+<p>Báo tường điện tử - Kỷ niệm 30/4</p>
+<p>Thiết kế bởi học sinh lớp 12</p>
 
-<div id="firework"></div>
-
-<script>
-
-/* hiệu ứng cuộn */
-
-const sections=document.querySelectorAll(".section");
-
-window.addEventListener("scroll",()=>{
-
-sections.forEach(sec=>{
-const top=sec.getBoundingClientRect().top;
-const screen=window.innerHeight;
-
-if(top<screen-100){
-sec.classList.add("show");
-}
-
-});
-
-});
-
-/* phóng to ảnh */
-
-const imgs=document.querySelectorAll(".photo img");
-const lightbox=document.getElementById("lightbox");
-const lightimg=document.getElementById("lightimg");
-
-imgs.forEach(img=>{
-img.onclick=()=>{
-lightbox.style.display="flex";
-lightimg.src=img.src;
-};
-});
-
-lightbox.onclick=()=>{
-lightbox.style.display="none";
-};
-
-/* pháo hoa khi tới 30/4 */
-
-window.addEventListener("scroll",()=>{
-const saigon=document.getElementById("saigon");
-const fire=document.getElementById("firework");
-
-const top=saigon.getBoundingClientRect().top;
-
-if(top<300){
-fire.style.display="block";
-}
-
-});
-
-</script>
+</footer>
 
 </body>
 </html>
