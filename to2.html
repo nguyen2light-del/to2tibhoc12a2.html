@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Giải phóng miền Nam - Thống nhất đất nước</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#7f0000,#b71c1c,#d32f2f);
+color:white;
+}
+
+/* tiêu đề */
+
+.header{
+text-align:center;
+padding:50px;
+font-size:45px;
+font-weight:bold;
+background:linear-gradient(90deg,#ffeb3b,#ffc107);
+color:#8b0000;
+animation: glow 3s infinite alternate;
+}
+
+@keyframes glow{
+from{box-shadow:0 0 10px #ffeb3b;}
+to{box-shadow:0 0 30px #ffeb3b;}
+}
+
+/* giới thiệu */
+
+.intro{
+width:80%;
+margin:auto;
+margin-top:30px;
+font-size:20px;
+line-height:1.6;
+background:rgba(255,255,255,0.1);
+padding:20px;
+border-radius:10px;
+}
+
+/* khung nội dung */
+
+.section{
+width:80%;
+margin:auto;
+margin-top:40px;
+background:white;
+color:#333;
+padding:25px;
+border-radius:12px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+
+opacity:0;
+transform:translateY(60px);
+transition:all 1s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.section h2{
+color:#b71c1c;
+border-left:8px solid #ffc107;
+padding-left:10px;
+}
+
+/* khung media */
+
+.media{
+margin-top:20px;
+height:320px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.media img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:8px;
+}
+
+.media iframe{
+width:100%;
+height:100%;
+border:none;
+border-radius:8px;
+}
+
+.footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+background:#880e4f;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+GIẢI PHÓNG MIỀN NAM - THỐNG NHẤT ĐẤT NƯỚC
+</div>
+
+<div class="intro">
+Cuối năm <b>1974 – đầu năm 1975</b>, Bộ Chính trị quyết định mở cuộc 
+<b>Tổng tiến công và nổi dậy mùa Xuân 1975</b> nhằm giải phóng miền Nam 
+và thống nhất đất nước.
+</div>
+
+
+<!-- Tây Nguyên -->
+
+<div class="section">
+<h2>Chiến dịch Tây Nguyên – 10/3/1975</h2>
+
+<p>
+Chiến dịch mở màn của cuộc Tổng tiến công mùa Xuân 1975,
+đánh chiếm Buôn Ma Thuột và làm tan rã hệ thống phòng thủ của đối phương.
+</p>
+
+<div class="media">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Buon_Ma_Thuot_1975.jpg">
+</div>
+
+</div>
+
+
+<!-- Huế Đà Nẵng -->
+
+<div class="section">
+<h2>Chiến dịch Huế – Đà Nẵng – 21/3 – 26/3/1975</h2>
+
+<p>
+Quân ta tiến công giải phóng Huế và Đà Nẵng,
+làm sụp đổ hoàn toàn hệ thống phòng thủ miền Trung của đối phương.
+</p>
+
+<div class="media">
+
+<iframe src="https://www.youtube.com/embed/7y0R9fF9N9k"></iframe>
+
+</div>
+
+</div>
+
+
+<!-- Xuân Lộc -->
+
+<div class="section">
+<h2>Chiến dịch Xuân Lộc – 9/4 – 21/4/1975</h2>
+
+<p>
+Xuân Lộc là tuyến phòng thủ cuối cùng trước Sài Gòn.
+Sau nhiều ngày chiến đấu ác liệt, quân ta giành thắng lợi.
+</p>
+
+<div class="media">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Xuan_Loc_1975.jpg">
+</div>
+
+</div>
+
+
+<!-- Hồ Chí Minh -->
+
+<div class="section">
+<h2>Chiến dịch Hồ Chí Minh – 26/4/1975</h2>
+
+<p>
+Chiến dịch quyết định giải phóng Sài Gòn,
+quân ta tiến công từ nhiều hướng vào trung tâm thành phố.
+</p>
+
+<div class="media">
+
+<iframe src="https://www.youtube.com/embed/8q4JQk7N3G4"></iframe>
+
+</div>
+
+</div>
+
+
+<!-- 30/4 -->
+
+<div class="section">
+<h2>Giải phóng Sài Gòn – 30/4/1975</h2>
+
+<p>
+Xe tăng quân giải phóng tiến vào Dinh Độc Lập,
+chính quyền Sài Gòn tuyên bố đầu hàng vô điều kiện.
+Miền Nam hoàn toàn được giải phóng, đất nước thống nhất.
+</p>
+
+<div class="media">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Tank_843_Independence_Palace.jpg">
+</div>
+
+</div>
+
+
+<div class="footer">
+Đại thắng mùa Xuân 1975 - Trang web lịch sử Việt Nam
+</div>
+
+
+<script>
+
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll',()=>{
+
+sections.forEach(sec=>{
+
+const top = sec.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(top < screen - 100){
+sec.classList.add('show');
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
