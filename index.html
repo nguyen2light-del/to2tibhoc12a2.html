@@ -12,13 +12,13 @@ margin:0;
 background:linear-gradient(to bottom,#ff4d4d,#ffd966);
 }
 
-/* tiêu đề */
+/* header */
 
 header{
 text-align:center;
 color:white;
 padding:50px;
-font-size:35px;
+font-size:40px;
 font-weight:bold;
 }
 
@@ -29,28 +29,27 @@ width:90%;
 margin:auto;
 }
 
-/* ô trắng chiến dịch */
+/* ô trắng */
 
-.campaign{
+.box{
 background:white;
 border-radius:18px;
 padding:40px;
 margin:60px auto;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 width:80%;
-min-height:600px;
 text-align:center;
 }
 
-/* tiêu đề chiến dịch */
+/* tiêu đề */
 
-.campaign h2{
+.box h2{
 color:#cc0000;
 }
 
 /* đoạn văn */
 
-.campaign p{
+.box p{
 font-size:18px;
 line-height:1.6;
 margin-top:15px;
@@ -66,6 +65,36 @@ margin:30px auto 0 auto;
 border-radius:12px;
 }
 
+/* thư viện ảnh */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.caption{
+font-size:14px;
+margin-top:8px;
+}
+
+/* footer */
+
+footer{
+text-align:center;
+padding:30px;
+color:white;
+font-size:18px;
+margin-top:40px;
+}
+
 </style>
 </head>
 
@@ -77,8 +106,9 @@ border-radius:12px;
 
 <div class="container">
 
+<!-- Chiến dịch Tây Nguyên -->
 
-<div class="campaign">
+<div class="box">
 
 <h2>Chiến dịch Tây Nguyên (10/3/1975)</h2>
 
@@ -94,8 +124,9 @@ Thắng lợi của chiến dịch đã tạo ra bước ngoặt quan trọng ch
 </div>
 
 
+<!-- Huế Đà Nẵng -->
 
-<div class="campaign">
+<div class="box">
 
 <h2>Chiến dịch Huế – Đà Nẵng (21–26/3/1975)</h2>
 
@@ -111,8 +142,9 @@ làm cho quân đội Sài Gòn suy yếu nhanh chóng.
 </div>
 
 
+<!-- Xuân Lộc -->
 
-<div class="campaign">
+<div class="box">
 
 <h2>Trận Xuân Lộc (9–21/4/1975)</h2>
 
@@ -127,8 +159,9 @@ quyết liệt, đã phá vỡ tuyến phòng thủ cuối cùng của đối ph
 </div>
 
 
+<!-- Hồ Chí Minh -->
 
-<div class="campaign">
+<div class="box">
 
 <h2>Chiến dịch Hồ Chí Minh (26–30/4/1975)</h2>
 
@@ -141,13 +174,12 @@ miền Nam hoàn toàn được giải phóng và đất nước thống nhất.
 
 <iframe src="https://www.youtube.com/embed/1u1n0V3x2v4" allowfullscreen></iframe>
 
-
 </div>
 
 
-<!-- Ý NGHĨA -->
+<!-- Kết quả và ý nghĩa -->
 
-<div class="card">
+<div class="box">
 
 <h2>Kết quả và ý nghĩa</h2>
 
@@ -161,16 +193,16 @@ miền Nam hoàn toàn được giải phóng và đất nước thống nhất.
 
 <p>
 Chiến thắng 30/04 là minh chứng cho sức mạnh trí tuệ và lòng yêu nước.
-Thế hệ học sinh hôm nay nguyện ứng dụng những kiến thức Tin học và công nghệ
-để tiếp bước cha ông, xây dựng một Việt Nam hùng cường trên bản đồ thế giới.
+Thế hệ học sinh hôm nay nguyện ứng dụng kiến thức và công nghệ
+để tiếp bước cha ông, xây dựng đất nước Việt Nam ngày càng phát triển.
 </p>
 
 </div>
 
 
-<!-- THƯ VIỆN ẢNH -->
+<!-- Thư viện ảnh -->
 
-<div class="card">
+<div class="box">
 
 <h2>Thư viện ảnh lịch sử</h2>
 
@@ -178,7 +210,7 @@ Thế hệ học sinh hôm nay nguyện ứng dụng những kiến thức Tin h
 
 <div>
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Tank_843_Independence_Palace.jpg">
-<div class="caption">Xe tăng 843 tiến vào Dinh Độc Lập ngày 30/4/1975</div>
+<div class="caption">Xe tăng tiến vào Dinh Độc Lập ngày 30/4/1975</div>
 </div>
 
 <div>
@@ -189,11 +221,6 @@ Thế hệ học sinh hôm nay nguyện ứng dụng những kiến thức Tin h
 <div>
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/North_Vietnamese_troops_enter_Saigon.jpg">
 <div class="caption">Quân giải phóng tiến vào Sài Gòn</div>
-</div>
-
-<div>
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Vietnamese_tank_843.jpg">
-<div class="caption">Xe tăng quân giải phóng trong chiến dịch Hồ Chí Minh</div>
 </div>
 
 <div>
@@ -211,10 +238,9 @@ Thế hệ học sinh hôm nay nguyện ứng dụng những kiến thức Tin h
 <footer>
 
 <p>Báo tường điện tử - Kỷ niệm 30/4</p>
-<p>Thiết kế bởi học sinh lớp 12</p>
+<p>Thiết kế bởi học sinh</p>
 
 </footer>
 
 </body>
-
 </html>
