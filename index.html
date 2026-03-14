@@ -17,85 +17,55 @@ background:linear-gradient(to bottom,#ff4d4d,#ffd966);
 header{
 text-align:center;
 color:white;
-padding:40px;
-font-size:38px;
+padding:50px;
+font-size:40px;
 font-weight:bold;
 }
 
-/* layout */
+/* khung chính */
 
-.layout{
-display:flex;
-width:95%;
+.container{
+width:90%;
 margin:auto;
 }
 
-/* sidebar */
-
-.sidebar{
-width:260px;
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-height:fit-content;
-margin-right:20px;
-}
-
-.sidebar h3{
-color:#cc0000;
-text-align:center;
-}
-
-.sidebar a{
-display:block;
-padding:10px;
-margin:8px 0;
-text-decoration:none;
-background:#ffe6e6;
-border-radius:8px;
-color:#990000;
-font-weight:bold;
-}
-
-.sidebar a:hover{
-background:#ffcccc;
-}
-
-/* nội dung */
-
-.content{
-flex:1;
-}
-
-/* box */
+/* ô trắng */
 
 .box{
 background:white;
 border-radius:18px;
 padding:40px;
-margin-bottom:40px;
+margin:60px auto;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
+width:80%;
 text-align:center;
 }
+
+/* tiêu đề */
 
 .box h2{
 color:#cc0000;
 }
 
+/* đoạn văn */
+
 .box p{
 font-size:18px;
 line-height:1.6;
+margin-top:15px;
 }
 
-video{
+/* video */
+
+.gallery video{
+display:block;
 width:85%;
 max-width:700px;
-margin-top:20px;
+margin:20px auto;
 border-radius:10px;
 }
 
-/* gallery */
+/* thư viện ảnh */
 
 .gallery{
 display:grid;
@@ -110,6 +80,11 @@ border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
+.caption{
+font-size:14px;
+margin-top:8px;
+}
+
 /* footer */
 
 footer{
@@ -117,6 +92,7 @@ text-align:center;
 padding:30px;
 color:white;
 font-size:18px;
+margin-top:40px;
 }
 
 </style>
@@ -128,91 +104,160 @@ font-size:18px;
 ĐẠI THẮNG MÙA XUÂN 1975
 </header>
 
-<div class="layout">
+<div class="container">
 
-<!-- SIDEBAR -->
+<!-- Chiến dịch Tây Nguyên -->
 
-<div class="sidebar">
+<div class="box">
 
-<h3>Mục lục</h3>
-
-<a href="#taynguyen">Chiến dịch Tây Nguyên</a>
-<a href="#huedanang">Huế – Đà Nẵng</a>
-<a href="#xuanloc">Trận Xuân Lộc</a>
-<a href="#hochiminh">Chiến dịch Hồ Chí Minh</a>
-<a href="#yknghia">Ý nghĩa</a>
-
-</div>
-
-<!-- CONTENT -->
-
-<div class="content">
-
-<div class="box" id="taynguyen">
-
-<h2>Chiến dịch Tây Nguyên</h2>
+<h2>Chiến dịch Tây Nguyên (10/3/1975)</h2>
 
 <p>
 Chiến dịch Tây Nguyên mở đầu cuộc Tổng tiến công và nổi dậy mùa Xuân 1975.
 Quân ta tiến công Buôn Ma Thuột, làm tan rã hệ thống phòng thủ của quân
-Việt Nam Cộng hòa ở Tây Nguyên.
+Việt Nam Cộng hòa ở Tây Nguyên và buộc đối phương phải rút khỏi khu vực này.
+Thắng lợi của chiến dịch đã tạo ra bước ngoặt quan trọng cho cuộc chiến.
 </p>
 
 <video controls>
-<source src="tn.mp4">
+<source src="tn.mp4" type="video/mp4">
+Trình duyệt không hỗ trợ video
+</video>
+</div>
+
+
+<!-- Huế Đà Nẵng -->
+
+<div class="box">
+
+<h2>Chiến dịch Huế – Đà Nẵng (21–26/3/1975)</h2>
+
+<p>
+Sau thắng lợi ở Tây Nguyên, quân ta nhanh chóng tiến xuống miền Trung.
+Trong thời gian ngắn, quân ta giải phóng hoàn toàn thành phố Huế
+và sau đó là Đà Nẵng. Đây là một trong những thắng lợi lớn,
+làm cho quân đội Sài Gòn suy yếu nhanh chóng.
+</p>
+
+<video controls>
+<source src="hdne.mp4" type="video/mp4">
+Trình duyệt không hỗ trợ video
+</video>
+</div>
+
+
+<!-- Xuân Lộc -->
+
+<div class="box">
+
+<h2>Trận Xuân Lộc (9–21/4/1975)</h2>
+
+<p>
+Xuân Lộc là tuyến phòng thủ quan trọng bảo vệ Sài Gòn từ phía Đông.
+Quân ta mở cuộc tấn công mạnh vào căn cứ này và sau nhiều ngày chiến đấu
+quyết liệt, đã phá vỡ tuyến phòng thủ cuối cùng của đối phương.
+</p>
+
+<video controls>
+<source src="xl.mp4" type="video/mp4">
+Trình duyệt không hỗ trợ video
 </video>
 
 </div>
 
-<div class="box" id="huedanang">
 
-<h2>Chiến dịch Huế – Đà Nẵng</h2>
+<!-- Hồ Chí Minh -->
+
+<div class="box">
+
+<h2>Chiến dịch Hồ Chí Minh (26–30/4/1975)</h2>
 
 <p>
-Quân ta nhanh chóng giải phóng Huế và Đà Nẵng,
-làm suy yếu nghiêm trọng lực lượng đối phương.
+Chiến dịch Hồ Chí Minh là chiến dịch cuối cùng của cuộc Tổng tiến công
+mùa Xuân 1975. Quân giải phóng tiến vào Sài Gòn từ nhiều hướng.
+Ngày 30/4/1975, xe tăng tiến vào Dinh Độc Lập, chính quyền Sài Gòn đầu hàng,
+miền Nam hoàn toàn được giải phóng và đất nước thống nhất.
 </p>
+
+<video controls>
+<source src="hcm.mp4" type="video/mp4">
+Trình duyệt không hỗ trợ video
+</video>
 
 </div>
 
-<div class="box" id="xuanloc">
 
-<h2>Trận Xuân Lộc</h2>
+<!-- Kết quả và ý nghĩa -->
 
-<p>
-Xuân Lộc là tuyến phòng thủ quan trọng bảo vệ Sài Gòn từ phía Đông.
-</p>
-
-</div>
-
-<div class="box" id="hochiminh">
-
-<h2>Chiến dịch Hồ Chí Minh</h2>
-
-<p>
-Ngày 30/4/1975, xe tăng tiến vào Dinh Độc Lập,
-miền Nam hoàn toàn giải phóng.
-</p>
-
-</div>
-
-<div class="box" id="yknghia">
+<div class="box">
 
 <h2>Kết quả và ý nghĩa</h2>
 
+<p><b>Kỷ nguyên mới:</b> Mở ra thời kỳ Độc lập, Tự do và Chủ nghĩa xã hội trên toàn bộ lãnh thổ Việt Nam.</p>
+
+<p><b>Sức mạnh đại đoàn kết:</b> Khẳng định đường lối lãnh đạo đúng đắn của Đảng và tinh thần quật cường của con người Việt Nam.</p>
+
+<p><b>Thống nhất non sông:</b> Chấm dứt sự chia cắt hai miền Nam - Bắc kéo dài 21 năm (1954 - 1975).</p>
+
+<p><b>Kết thúc ách thống trị:</b> Xóa bỏ hoàn toàn chế độ thực dân mới của đế quốc Mỹ tại Việt Nam.</p>
+
 <p>
-Chấm dứt chiến tranh, thống nhất đất nước và mở ra
-kỷ nguyên mới cho dân tộc Việt Nam.
+Chiến thắng 30/04 là minh chứng cho sức mạnh trí tuệ và lòng yêu nước.
+Thế hệ học sinh hôm nay nguyện ứng dụng kiến thức và công nghệ
+để tiếp bước cha ông, xây dựng đất nước Việt Nam ngày càng phát triển.
 </p>
 
 </div>
 
+
+<!-- Thư viện ảnh -->
+
+<div class="box">
+
+<h2>Thư viện ảnh lịch sử</h2>
+
+<div class="gallery">
+
+<div>
+<img src="anh5.jpg">
+<div class="caption">Chiến dịch Tây Nguyên</div>
+</div>
+
+<div>
+<img src="anh4.jpg">
+<div class="caption">Chiến dịch Huế – Đà Nẵng</div>
+</div>
+
+<div>
+<img src="anh3.jpg">
+<div class="caption">Ngày 9/4/1975: Chiến dịch Phan Rang - Xuân Lộc bắt đầu</div>
+</div>
+
+<div>
+<img src="anh1.jpg">
+<div class="caption">Ngày 26-4-1975, Chiến dịch Hồ Chí Minh chính thức mở màn</div>
+</div>
+
+<div>
+<img src="xetang.jpg">
+<div class="caption">Giải phóng Sài Gòn</div>
+</div>
+
+<div>
+<img src="anh6.jpg">
+<div class="caption">Người dân chào mừng ngày đất nước thống nhất</div>
 </div>
 
 </div>
+
+</div>
+
 
 <footer>
-Báo tường điện tử - Kỷ niệm 30/4
+
+<p>Báo tường điện tử - Kỷ niệm 30/4</p>
+<p>Thiết kế bởi Thành viên Tổ 2 12A2</p>
+
 </footer>
 
 </body>
